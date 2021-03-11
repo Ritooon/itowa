@@ -2,8 +2,9 @@ from os import path, name
 import csv
 
 def getAnimalList(dataFile):
+   
     directory = path.dirname(path.dirname(__file__))
-    pathToFile = path.join(directory, "data", dataFile)
+    pathToFile = path.join(directory, dataFile)
     
     animalList = []
 
