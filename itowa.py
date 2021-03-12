@@ -68,7 +68,7 @@ if __name__ == "__main__":
 
                     ### Paru Vendu         
                     PVSpider.animalList = animalList
-                    process = CrawlerProcess(settings={})
+                    process = CrawlerProcess(settings={ 'DOWNLOAD_DELAY' : 1 })
                     process.crawl(PVSpider)
                     process.start()
                     if len(PVSpider.finalJSON) > 0:

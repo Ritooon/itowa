@@ -5,6 +5,7 @@ from urllib.request import urlopen
 import json
 from os import path, name
 import datetime
+import time
 
 class simpleAPIRequest():
 
@@ -55,6 +56,7 @@ class simpleAPIRequest():
                 #
                 elif response.status_code == 404:
                     log.warning('Not existing)')
+                time.sleep(10)
         # Throw error if json is malfromatted
         except json.decoder.JSONDecodeError as e:
             log.error('Malformatted json : {}'.format(e) )
