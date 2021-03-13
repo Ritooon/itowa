@@ -56,7 +56,7 @@ class simpleAPIRequest():
                 #
                 elif response.status_code == 404:
                     log.warning('Not existing)')
-                time.sleep(10)
+                time.sleep(2)
         # Throw error if json is malfromatted
         except json.decoder.JSONDecodeError as e:
             log.error('Malformatted json : {}'.format(e) )
